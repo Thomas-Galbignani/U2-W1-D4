@@ -35,8 +35,8 @@ p {
   align-items: center;
   flex-direction: column;
   line-height: 2.2em;
-  /* position: relative;
-  animation: fall 3s; */
+  position: relative;
+  animation: fall 3s;
 }
 
 .yellow {
