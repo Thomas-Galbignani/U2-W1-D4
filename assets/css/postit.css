@@ -24,6 +24,10 @@ p {
   width: 100%;
 }
 
+.postit-container {
+  animation: fall 3s;
+}
+
 .postit {
   height: 190px;
   width: 220px;
@@ -36,7 +40,6 @@ p {
   flex-direction: column;
   line-height: 2.2em;
   position: relative;
-  animation: fall 3s;
 }
 
 .yellow {
@@ -51,30 +54,34 @@ p {
   background-color: #c7c7f5;
 }
 
-.first .postit:nth-of-type(1) {
+.first .postit-container:nth-of-type(1) {
   rotate: -15deg;
 }
-.first .postit:nth-of-type(2) {
+.first .postit-container:nth-of-type(2) {
   rotate: 22deg;
 }
-.first .postit:nth-of-type(3) {
+.first .postit-container:nth-of-type(3) {
   rotate: -12deg;
 }
-.first .postit:nth-of-type(4) {
+.first .postit-container:nth-of-type(4) {
   rotate: 17deg;
 }
 
-.second .postit:nth-of-type(1) {
+.second .postit-container:nth-of-type(1) {
   rotate: -5deg;
 }
-.second .postit:nth-of-type(2) {
+.second .postit-container:nth-of-type(2) {
   rotate: 12deg;
 }
-.second .postit:nth-of-type(3) {
+.second .postit-container:nth-of-type(3) {
   rotate: -2deg;
 }
-.second .postit:nth-of-type(4) {
+.second .postit-container:nth-of-type(4) {
   rotate: -10deg;
+}
+
+.postit-container:hover {
+  z-index: 2;
 }
 
 .postit:hover {
@@ -82,7 +89,6 @@ p {
   scale: 1.5;
   -webkit-box-shadow: 8px 5px 5px 5px #000000;
   box-shadow: 8px 5px 5px 5px #000000;
-  z-index: 2;
   transition-delay: 0ms;
 }
 
@@ -97,7 +103,7 @@ p {
   }
 }
 
-.second .postit:nth-of-type(2):hover {
+.second .postit-container:nth-of-type(2) .postit:hover {
   animation: spin 2s linear infinite;
 }
 
@@ -113,7 +119,7 @@ p {
   }
 }
 
-.first .postit:nth-of-type(2):hover {
+.first .postit-container:nth-of-type(2) .postit:hover {
   animation: colorate 1s linear infinite;
 }
 @keyframes fall {

@@ -33,22 +33,30 @@ main {
 }
 @keyframes carosello {
   0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  5% {
     opacity: 1;
     transform: translateY(0);
   }
-
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
   40% {
     opacity: 0;
     transform: translateY(-100%);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 0;
+    transform: translateY(-100%);
   }
 }
 #testoAlternato .parole i {
   position: absolute;
-  width: 500px;
+  white-space: nowrap;
+  opacity: 0;
   animation: carosello 10s infinite;
 }
 #testoAlternato .parole i:nth-child(1) {
